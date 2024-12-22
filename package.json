@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --base=/geo-sys-reg-dev/",
-    "build": "npx tailwindcss -i ./src/css/styles.css -o ./src/css/styles.css --watch",
     "preview": "vite preview"
   },
   "devDependencies": {
