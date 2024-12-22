@@ -1,0 +1,84 @@
+.infographic {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 64px;
+    margin: 0 auto 140px;
+    padding: 0px 44px;
+    max-width: 1312px;
+    /* background-color: #101010; */
+}
+
+.infographic-header {
+    /* font-family: "e-Ukraine", sans-serif; */
+    font-weight: 400;
+    font-size: 44px;
+    color: #fff;
+    align-self: flex-start;
+    /* padding: 0 44px; */
+}
+
+.infographic-text {
+    /* font-family: 'e-Ukraine', sans-serif; */
+}
+
+.infographic-cards {}
+
+.infographic-card-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    gap: 37px;
+    
+    padding: 0 44px;
+}
+
+.infographic-card-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 100px;
+    position: relative;
+    width: 278px;
+    height: 276px;
+}
+
+.card-circle {
+    /* position: absolute; */
+}
+
+.infographic-circle {
+    position: absolute;
+    top: 0;
+    right: 35px;
+    /* padding: 0 35.12px; */
+}
+
+.infographic-circle-back {
+    fill: #1d1d1d;
+}
+
+.infographic-circle-9 {
+    right: 85px;
+}
+
+.percentage {
+    /* font-family: "e-Ukraine Head", sans-serif; */
+        font-weight: 400;
+        font-size: 44px;
+        text-align: center;
+        color: #fff;
+}
+
+.card-info {
+    /* font-family: "e-Ukraine", sans-serif; */
+    font-weight: 400;
+    font-size: 18px;
+    
+    line-height: 1.33;
+    color: #d3d3d3;
+    align-self: flex-start;
+}

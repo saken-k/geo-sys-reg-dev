@@ -6,11 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --base=/geo-sys-reg-dev/",
+    "build": "npx tailwindcss -i ./src/css/styles.css -o ./src/css/styles.css --watch",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
     "glob": "^11.0.0",
-    "postcss": "^8.4.41",
+    "postcss": "^8.4.49",
     "postcss-sort-media-queries": "^5.2.0",
     "tailwindcss": "^3.4.16",
     "vite": "^5.4.6"
@@ -20,5 +22,8 @@
   "dependencies": {
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-html-inject": "^1.1.2"
-  }
+  },
+  "description": "Цей проект було створено за допомогою Vite. Для знайомства та налаштування додаткових можливостей [звернись до документації](https://vitejs.dev/).",
+  "main": "tailwind.config.js",
+  "keywords": []
 }

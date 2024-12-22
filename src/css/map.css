@@ -1,0 +1,367 @@
+.ukraine-map {
+    background: #1d1d1d;
+    border-radius: 30px;
+        padding: 44px;
+        max-width: 1312px;
+        /* height: 984px; */
+        margin: 0 auto;
+}
+
+.map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    padding: 44px;
+    /* background-color: #000; */
+    
+    border-radius: 30px;
+}
+
+.map-info {
+    margin: 0 auto;
+}
+
+.map-info-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.map-info-item {
+    display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        gap: 13px;
+}
+
+.map-logo {}
+
+.map-logo-grey {
+    fill: #393939;
+}
+
+.map-info-text {
+    font-family: "e-Ukraine", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+    
+        line-height: 1.33333;
+        color: #d3d3d3;
+}
+
+.region-map {
+    position: relative;
+    width: 1235px;
+    height: 784px;
+}
+
+.map-logo {
+    /* fill: red; */
+    /* background-color: #fff; */
+    opacity: 50%;
+}
+
+.map-logo-Cherkasy {
+    position: absolute;
+    left: 518.97px;
+    top: 222.93px;
+}
+
+.map-logo-Chernihiv {
+    position: absolute;
+    left: 578.72px;
+    top: 0;
+}
+
+.map-logo-Chernivtsi {
+    position: absolute;
+    left: 196.39px;
+    top: 378.91px;
+}
+
+.map-logo-Dnipropetrovsk {
+    position: absolute;
+    left: 747.92px;
+    top: 327.67px;
+}
+
+.map-logo-Donetsk {
+    position: absolute;
+    left: 991.88px;
+    top: 323.45px;
+}
+
+.map-logo-Ivano-Frankivsk {
+    position: absolute;
+    left: 106.19px;
+    top: 291.17px;
+}
+
+.map-logo-Kharkiv {
+    position: absolute;
+    left: 878.56px;
+    top: 200.26px;
+}
+
+.map-logo-Kherson {
+    position: absolute;
+    left: 649.02px;
+    top: 483.51px;
+}
+
+.map-logo-Khmelnytskyi {
+    position: absolute;
+    left: 281.18px;
+    top: 186.41px;
+}
+
+.map-logo-Kirovohrad {
+    position: absolute;
+    left: 528.48px;
+    top: 322.46px;
+}
+
+.map-logo-Kyiv-city {
+    position: absolute;
+    left: 561.34px;
+    top: 186.82px;
+}
+
+.map-logo-Kyiv {
+    position: absolute;
+    left: 493.12px;
+    top: 89.67px;
+}
+
+.map-logo-Luhansk {
+    position: absolute;
+    left: 1079.39px;
+    top: 237.95px;
+}
+
+.map-logo-Lviv {
+    position: absolute;
+    left: 44.51px;
+    top: 179.18px;
+}
+
+.map-logo-Mykolaiv {
+    position: absolute;
+    left: 557.88px;
+    top: 422.3px;
+}
+
+.map-logo-Odesa {
+    position: absolute;
+    left: 426.29px;
+    top: 422.24px;
+}
+
+.map-logo-Poltava {
+    position: absolute;
+    left: 688.38px;
+    top: 190.53px;
+}
+
+.map-logo-Rivne {
+    position: absolute;
+    left: 209.71px;
+    top: 45.52px;
+}
+
+.map-logo-Sevastopol {
+    position: absolute;
+    left: 776.41px;
+    top: 745.29px;
+}
+
+.map-logo-Simferopol {
+    position: absolute;
+    left: 715px;
+    top: 613.85px;
+}
+
+.map-logo-Sumy {
+    position: absolute;
+    left: 746.83px;
+    top: 1.17px;
+}
+
+.map-logo-Ternopil {
+    position: absolute;
+    left: 185.36px;
+    top: 219.75px;
+}
+
+.map-logo-Vinnytsia {
+    position: absolute;
+    left: 365.89px;
+    top: 257.98px;
+}
+
+.map-logo-Volyn {
+    position: absolute;
+    left: 108.49px;
+    top: 43.56px;
+}
+
+.map-logo-Zakarpattia {
+    position: absolute;
+    left: 9.08px;
+    top: 337.22px;
+}
+
+.map-logo-Zaporizhzhia {
+    position: absolute;
+    left: 831.49px;
+    top: 430.79px;
+}
+
+.map-logo-Zhytomyr {
+    position: absolute;
+    left: 354.43px;
+    top: 73.63px;
+}
+
+.map-logo-Sumy,
+.map-logo-Cherkasy,
+.map-logo-Vinnytsia,
+.map-logo-Khmelnytskyi,
+.map-logo-Ternopil,
+.map-logo-Rivne,
+.map-logo-Volyn,
+.map-logo-Kyiv,
+.map-logo-Kyiv-city,
+.map-logo-Chernihiv {
+    fill: #e0fc52;
+    transition: fill 0.3s ease, stroke 0.3s ease;
+    stroke: #535050;
+    stroke-width: 0.2px;
+}
+
+.map-logo-Ivano-Frankivsk,
+.map-logo-Zhytomyr,
+.map-logo-Kirovohrad,
+.map-logo-Mykolaiv,
+.map-logo-Poltava,
+.map-logo-Dnipropetrovsk,
+.map-logo-Kharkiv,
+.map-logo-Donetsk,
+.map-logo-Zaporizhzhia,
+.map-logo-Chernivtsi {
+    fill: #2969f6;
+    transition: fill 0.3s ease, stroke 0.3s ease;
+    stroke: #535050;
+    stroke-width: 0.2px;
+}
+
+.map-logo-Kherson,
+.map-logo-Luhansk,
+.map-logo-Lviv,
+.map-logo-Odesa,
+.map-logo-Sevastopol,
+.map-logo-Simferopol,
+.map-logo-Zakarpattia {
+    fill: #393939;
+    transition: fill 0.3s ease, stroke 0.3s ease;    
+    stroke: #535050;
+    stroke-width: 0.2px;
+}
+
+.map-logo-Sumy:hover,
+.map-logo-Cherkasy:hover,
+.map-logo-Vinnytsia:hover,
+.map-logo-Khmelnytskyi:hover,
+.map-logo-Ternopil:hover,
+.map-logo-Rivne:hover,
+.map-logo-Volyn:hover,
+.map-logo-Kyiv:hover,
+.map-logo-Kyiv-city:hover,
+.map-logo-Chernihiv:hover {
+    fill: #b5d608;
+    transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.map-logo-Ivano-Frankivsk:hover,
+.map-logo-Zhytomyr:hover,
+.map-logo-Kirovohrad:hover,
+.map-logo-Mykolaiv:hover,
+.map-logo-Poltava:hover,
+.map-logo-Dnipropetrovsk:hover,
+.map-logo-Kharkiv:hover,
+.map-logo-Donetsk:hover,
+.map-logo-Zaporizhzhia:hover,
+.map-logo-Chernivtsi:hover {
+    fill: #3b6Edd;
+    transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.map-logo-Kherson:hover,
+.map-logo-Luhansk:hover,
+.map-logo-Lviv:hover,
+.map-logo-Odesa:hover,
+.map-logo-Sevastopol:hover,
+.map-logo-Simferopol:hover,
+.map-logo-Zakarpattia:hover {
+    fill: #534f534f;
+    transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.details {
+    position: absolute;
+    top: 170px;
+    left: 650px;
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+
+        border-radius: 50px;
+            padding: 8px 12px 8px 8px;
+            width: 218px;
+            height: 76px;
+
+                background: rgba(21, 21, 21, 0.5);
+                display: none;
+                z-index: 11;
+}
+
+.elipse-detail {
+    width: 60px;
+    height: 60px;
+}
+
+.elipse-detail-icon {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    /* padding: 0 35.12px; */
+}
+
+.elipse-detail-percentage {
+    /* font-family: "e-Ukraine", sans-serif; */
+    padding-top: 19px;
+    padding-right: 11px;
+        font-weight: 200;
+        font-size: 13px;
+    
+        line-height: 1.46154;
+        text-align: center;
+        color: #fff;
+}
+
+.kyiv-hover:hover .details {
+    display: flex;
+}
+
+.text-detail {
+    /* font-family: "e-Ukraine", sans-serif; */
+        font-weight: 200;
+        font-size: 13px;
+        line-height: 1.46154;
+        color: #fff;
+}

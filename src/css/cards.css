@@ -1,0 +1,94 @@
+.cards {
+    padding: 64px 0;
+    margin: 0 auto;
+    max-width: 1312px;
+    /* background-color: #101010; */
+}
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+.card-item {
+    display: flex;
+    /* align-items: flex-start; */
+    justify-content: space-between;
+    flex-direction: column;
+    width: 421px;
+    height: 328px;
+}
+.folder {
+    position: relative;
+}
+.folder-icon-1 {
+    position: absolute;
+}
+.folder-icon-2 {
+    position: absolute;
+    top: 42px;
+}
+.folder-overlay-1 {
+    position: absolute;
+    top: 5px;
+    left: 144px;
+    transform: translateY(45%);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.folder-overlay-2 {
+    position: absolute;
+    top: 20px;
+    left: 144px;
+    transform: translateY(30%);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.folder-overlay-3 {
+    position: absolute;
+    top: -50px;
+    left: 290px;
+    transform: translateY(50%);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.folder-overlay-4 {
+    position: absolute;
+    top: -25px;
+    left: 190px;
+    transform: translateY(50%);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-item:hover .folder-overlay-1,
+.card-item:hover .folder-overlay-2,
+.card-item:hover .folder-overlay-3,
+.card-item:hover .folder-overlay-4,
+.card-item:hover .card-title {
+    transform: translateY(0%);
+}
+.card-text {
+    position: relative;
+}
+.card-label {
+    position: absolute;
+    top: -330px;
+    left: 0;
+    padding: 16px 44px;
+    font-weight: 400;
+    font-size: 26px;
+    color: #fff;
+    z-index: 10;
+}
+.card-title {
+    padding-left: 44px;
+    /* font-family: "e-Ukraine", sans-serif; */
+    font-weight: 400;
+    font-size: 26px;
+    color: #fff;
+    z-index: 10;
+    /* width: 100%; */
+
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    transform: translateY(50%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
