@@ -1,68 +1,139 @@
-<header>
-  <div class="header">
-    <nav class="navigation">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="36" height="34">
-          <use href="../img/icons.svg#icon-logo"></use>
-        </svg>
-        <p class="text-logo">
+<header class="text-white py-8">
+  <div class="container mx-auto flex justify-between items-center">
+    <nav class="flex items-center gap-14">
+      <a
+        class="flex items-center gap-2 hover:text-indigo-400 transition"
+        href="./index.html"
+        aria-label="Site logo"
+      >
+        <img class="w-9 h-8 text-white" src="../img/SVG/logo.svg" alt="logo" />
+        <p class="text-sm pb-2">
           Міністерство <br />
           Відновлення
         </p>
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Реєстри</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Сервіси</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Стратегії</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Програми та проєкти</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Документація</a>
-        </li>
-        <li class="nav-item">
-          <button class="burger-btn">
-            <svg class="nav-logo-icon" width="24" height="24">
-              <use href="../img/icons.svg#icon-menu"></use>
-            </svg>
-          </button>
-        </li>
-      </ul>
+      <div class="hidden xl:block">
+        <ul class="flex items-center gap-10 pb-2">
+          <li>
+            <a class="hover:text-indigo-400" href="#">Реєстри</a>
+          </li>
+          <li>
+            <a class="hover:text-indigo-400" href="#">Сервіси</a>
+          </li>
+          <li>
+            <a class="hover:text-indigo-400" href="#">Стратегії</a>
+          </li>
+          <li>
+            <a class="hover:text-indigo-400" href="#">Програми та проєкти</a>
+          </li>
+          <li>
+            <a class="hover:text-indigo-400" href="#">Документація</a>
+          </li>
+        </ul>
+      </div>
+      <div class="block xl:hidden relative inline-block text-left">
+        <button
+          type="button"
+          class="inline-flex justify-center w-full shadow-sm px-4 py-2"
+          onclick="toggleDropdown()"
+        >
+          <img
+            class="w-6 h-6 text-white"
+            src="../img/SVG/menu.svg"
+            alt="logo"
+          />
+        </button>
+        <div
+          id="dropdownMenu"
+          class="hidden absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-20"
+        >
+          <div
+            class="py-1"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="menu-button"
+          >
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:text-indigo-400"
+              role="menuitem"
+              >Реєстри</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:text-indigo-400"
+              role="menuitem"
+              >Сервіси</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:text-indigo-400"
+              role="menuitem"
+              >Стратегії</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:text-indigo-400"
+              role="menuitem"
+              >Програми та проєкти</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:text-indigo-400"
+              role="menuitem"
+              >Документація</a
+            >
+          </div>
+        </div>
+      </div>
     </nav>
-    <div class="services">
-      <ul class="service-list">
-        <li class="service-item service-item-icon">
-          <button class="search-btn">
-            <svg width="24" height="24">
-              <use href="../img/icons.svg#icon-icon-search"></use>
-            </svg>
+    <div>
+      <ul class="flex items-center gap-4">
+        <li>
+          <button class="p-2">
+            <img
+              class="hidden sm:block w-[24px] h-[24px] text-white"
+              src="../img/SVG/icon-search.svg"
+              alt="logo"
+            />
           </button>
         </li>
-        <li class="service-item service-item-icon">
-          <button class="eye-btn">
-            <svg width="24" height="24">
-              <use href="../img/icons.svg#icon-eye"></use>
-            </svg>
+        <li>
+          <button class="p-2">
+            <img
+              class="hidden sm:block w-[24px] h-[24px] text-white"
+              src="../img/SVG/eye.svg"
+              alt="logo"
+            />
           </button>
         </li>
-        <li class="service-item">
-          <button class="lang-btn">
+        <li>
+          <button
+            class="flex w-[97px] h-[44px] items-center gap-1 border border-white rounded-full px-5 pb-2 text-white"
+          >
             UA
-            <svg width="24" height="24">
-              <use href="../img/icons.svg#icon-icon-down"></use>
-            </svg>
+            <img
+              class="w-6 h-6 pt-2 text-white"
+              src="../img/SVG/icon-down.svg"
+              alt="logo"
+            />
           </button>
         </li>
-        <li class="service-item">
-          <button class="login-btn">Увійти</button>
+        <li>
+          <button
+            class="bg-white text-black rounded-full px-6 pt-1.5 pb-3.5 font-medium"
+          >
+            Увійти
+          </button>
         </li>
       </ul>
     </div>
   </div>
 </header>
+
+<script>
+  function toggleDropdown() {
+    const dropdown = document.getElementById('dropdownMenu');
+    dropdown.classList.toggle('hidden');
+  }
+</script>
