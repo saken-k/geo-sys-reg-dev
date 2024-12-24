@@ -6,595 +6,776 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Міністерство Відновлення</title>
     <base href="/geo-sys-reg-dev/" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              eukraine: ['e-Ukraine', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @font-face {
+        font-family: 'e-Ukraine';
+        src: url('/geo-sys-reg-dev/assets/e-ukrainehead-regular_w-DWQJLZPI.woff2')
+            format('woff2'),
+          url('/geo-sys-reg-dev/assets/e-ukrainehead-regular_w-CP3CvoRQ.woff')
+            format('woff');
+      }
+
+      body {
+        font-family: 'e-Ukraine', sans-serif;
+      }
+    </style>
     <script type="module" crossorigin src="/geo-sys-reg-dev/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/geo-sys-reg-dev/assets/index-hU4Z2XPj.css">
+    <link rel="stylesheet" crossorigin href="/geo-sys-reg-dev/assets/index-BhUDic_H.css">
   </head>
   <body>
-    <header>
-  <div class="header">
-    <nav class="navigation">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="36" height="34">
-          <use href="../img/icons.svg#icon-logo"></use>
-        </svg>
-        <p class="text-logo">
+    <header class="text-white py-8">
+  <div class="container mx-auto flex justify-between items-center">
+    <nav class="flex items-center gap-14">
+      <a
+        class="flex items-center gap-2 hover:text-indigo-400 transition"
+        href="./index.html"
+        aria-label="Site logo"
+      >
+        <img class="w-9 h-8 text-white" src="../img/SVG/logo.svg" alt="logo" />
+        <p class="text-sm pb-2">
           Міністерство <br />
           Відновлення
         </p>
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Реєстри</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Сервіси</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Стратегії</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Програми та проєкти</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Документація</a>
-        </li>
-        <li class="nav-item">
-          <button class="burger-btn">
-            <svg class="nav-logo-icon" width="24" height="24">
-              <use href="../img/icons.svg#icon-menu"></use>
-            </svg>
-          </button>
-        </li>
-      </ul>
+      <div class="hidden xl:block">
+        <ul class="flex items-center gap-10 pb-2">
+          <li>
+            <a class="hover:text-indigo-400" href="#">Реєстри</a>
+          </li>
+          <li>
+            <a class="hover:text-indigo-400" href="#">Сервіси</a>
+          </li>
+          <li>
+            <a class="hover:text-indigo-400" href="#">Стратегії</a>
+          </li>
+          <li>
+            <a class="hover:text-indigo-400" href="#">Програми та проєкти</a>
+          </li>
+          <li>
+            <a class="hover:text-indigo-400" href="#">Документація</a>
+          </li>
+        </ul>
+      </div>
+      <div class="block xl:hidden relative inline-block text-left">
+        <button
+          type="button"
+          class="inline-flex justify-center w-full shadow-sm px-4 py-2"
+          onclick="toggleDropdown()"
+        >
+          <img
+            class="w-6 h-6 text-white"
+            src="../img/SVG/menu.svg"
+            alt="logo"
+          />
+        </button>
+        <div
+          id="dropdownMenu"
+          class="hidden absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-20"
+        >
+          <div
+            class="py-1"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="menu-button"
+          >
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:text-indigo-400"
+              role="menuitem"
+              >Реєстри</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:text-indigo-400"
+              role="menuitem"
+              >Сервіси</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:text-indigo-400"
+              role="menuitem"
+              >Стратегії</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:text-indigo-400"
+              role="menuitem"
+              >Програми та проєкти</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:text-indigo-400"
+              role="menuitem"
+              >Документація</a
+            >
+          </div>
+        </div>
+      </div>
     </nav>
-    <div class="services">
-      <ul class="service-list">
-        <li class="service-item service-item-icon">
-          <button class="search-btn">
-            <svg width="24" height="24">
-              <use href="../img/icons.svg#icon-icon-search"></use>
-            </svg>
+    <div>
+      <ul class="flex items-center gap-4">
+        <li>
+          <button class="p-2">
+            <img
+              class="hidden sm:block w-[24px] h-[24px] text-white"
+              src="../img/SVG/icon-search.svg"
+              alt="logo"
+            />
           </button>
         </li>
-        <li class="service-item service-item-icon">
-          <button class="eye-btn">
-            <svg width="24" height="24">
-              <use href="../img/icons.svg#icon-eye"></use>
-            </svg>
+        <li>
+          <button class="p-2">
+            <img
+              class="hidden sm:block w-[24px] h-[24px] text-white"
+              src="../img/SVG/eye.svg"
+              alt="logo"
+            />
           </button>
         </li>
-        <li class="service-item">
-          <button class="lang-btn">
+        <li>
+          <button
+            class="flex w-[97px] h-[44px] items-center gap-1 border border-white rounded-full px-5 pb-2 text-white"
+          >
             UA
-            <svg width="24" height="24">
-              <use href="../img/icons.svg#icon-icon-down"></use>
-            </svg>
+            <img
+              class="w-6 h-6 pt-2 text-white"
+              src="../img/SVG/icon-down.svg"
+              alt="logo"
+            />
           </button>
         </li>
-        <li class="service-item">
-          <button class="login-btn">Увійти</button>
+        <li>
+          <button
+            class="bg-white text-black rounded-full px-6 pt-1.5 pb-3.5 font-medium"
+          >
+            Увійти
+          </button>
         </li>
       </ul>
     </div>
   </div>
 </header>
 
+<script>
+  function toggleDropdown() {
+    const dropdown = document.getElementById('dropdownMenu');
+    dropdown.classList.toggle('hidden');
+  }
+</script>
+
 
     <main>
-      <!-- Loads the specified .html file -->
-      <div class="title">
-  <div class="title-header">
-    <p class="title-name">Геопортал показників Регіонального розвитку</p>
-    <p class="title-desc">
+      <div
+  class="flex container mx-auto flex-col justify-between h-[1142px] relative"
+>
+  <div
+    class="flex flex-col gap-8 p-11 max-w-[1312px] mx-auto bg-black bg-opacity-90 z-10"
+  >
+    <p
+      class="font-bold text-xl lg:text-[57px] leading-[1.26] text-white max-w-[1224px]"
+    >
+      Геопортал показників Регіонального розвитку
+    </p>
+    <p
+      class="flex flex-col gap-2 border-l-4 border-gray-400 pl-2 max-w-[727px] text-gray-400 text-[16px] leading-6"
+    >
       Єдина геоінформаційна система здійснення моніторингу та оцінювання
       розвитку регіонів і територіальних громад
     </p>
   </div>
-  <div class="animation">
-    <svg class="animation-icon" width="1427" height="1192">
-      <use href="../img/icons.svg#icon-Group-13"></use>
-    </svg>
-    <svg class="animation-icon" width="548" height="553">
-      <use href="../img/icons.svg#icon-Subtract"></use>
-    </svg>
-    <svg class="animation-icon" width="137" height="485">
-      <use href="../img/icons.svg#icon-Subtract-1"></use>
-    </svg>
+  <div
+    class="flex items-center justify-center w-full h-full bg-black transition-transform duration-700 hover:scale-[0.3]"
+  >
+    <img
+      class="absolute w-[357px] h-[298px] lg:w-[1427px] lg:h-[1192px]"
+      src="../img/SVG/Group-13.svg"
+      alt="Hero Icon"
+    />
+    <img
+      class="absolute w-[137px] h-[138px] lg:w-[548px] lg:h-[553px]"
+      src="../img/SVG/Subtract.svg"
+      alt="Hero Icon"
+    />
+    <img
+      class="absolute w-[34px] h-[121px] lg:w-[137px] lg:h-[485px]"
+      src="../img/SVG/Subtract-1.svg"
+      alt="Hero Icon"
+    />
   </div>
-  <div class="target">
-    <p class="target-name">Наша мета</p>
-    <p class="target-desc">
+  <div
+    class="flex flex-col items-center gap-6 p-11 bg-black bg-opacity-90 backdrop-blur-lg z-10"
+  >
+    <p class="font-medium text-[44px] text-white">Наша мета</p>
+    <p
+      class="text-center text-gray-400 text-[22px] leading-[1.27] max-w-[1220px] pb-1"
+    >
       Забезпечити повний цикл формування, реалізації та моніторингу регіональної
       політики: від рішень на основі даних та стратегічного планування до роботи
       зі стейкголдерами та моніторингу регіонального розвитку
     </p>
-    <div class="flowers">
-      <div class="flower-left">
-        <svg class="flowers-icon" width="79.13" height="58.67">
-          <use href="../img/icons.svg#icon-flower1"></use>
-        </svg>
-        <svg class="flowers-icon" width="79.13" height="58.67">
-          <use href="../img/icons.svg#icon-flower2"></use>
-        </svg>
-        <svg class="flowers-icon" width="45.76" height="42.68">
-          <use href="../img/icons.svg#icon-flower3"></use>
-        </svg>
+    <div
+      class="fixed bottom-[-15px] flex justify-between w-full px-[81px] bg-black"
+    >
+      <div class="flex items-center">
+        <img
+          class="w-[79.13px] h-[58.67px]"
+          src="../img/SVG/flower1.svg"
+          alt="Flower 1 Icon"
+        />
+        <img
+          class="w-[79.13px] h-[58.67px]"
+          src="../img/SVG/flower2.svg"
+          alt="Flower 2 Icon"
+        />
+        <img
+          class="w-[45.76px] h-[42.68px]"
+          src="../img/SVG/flower3.svg"
+          alt="Flower 3 Icon"
+        />
       </div>
-      <div class="flower-right">
-        <svg class="flowers-icon" width="79.13" height="58.67">
-          <use href="../img/icons.svg#icon-flower1"></use>
-        </svg>
-        <svg class="flowers-icon" width="79.13" height="58.67">
-          <use href="../img/icons.svg#icon-flower2"></use>
-        </svg>
-        <svg class="flowers-icon" width="45.76" height="42.68">
-          <use href="../img/icons.svg#icon-flower3"></use>
-        </svg>
+      <div class="flex items-center transform rotate-180">
+        <img
+          class="w-[79.13px] h-[58.67px]"
+          src="../img/SVG/flower1.svg"
+          alt="Flower 1 Icon"
+        />
+        <img
+          class="w-[79.13px] h-[58.67px]"
+          src="../img/SVG/flower2.svg"
+          alt="Flower 2 Icon"
+        />
+        <img
+          class="w-[45.76px] h-[42.68px]"
+          src="../img/SVG/flower3.svg"
+          alt="Flower 3 Icon"
+        />
       </div>
     </div>
   </div>
 </div>
 
-      <div class="cards">
-  <ul class="card-list">
-    <li class="card-item">
-      <div class="folder">
-        <svg class="folder-overlay-1" width="282" height="222">
-          <use href="../img/icons.svg#icon-folderwhite1"></use>
-        </svg>
-        <svg class="folder-overlay-3" width="87" height="190">
-          <use href="../img/icons.svg#icon-folderwhite3"></use>
-        </svg>
-        <svg class="folder-overlay-4" width="102" height="159">
-          <use href="../img/icons.svg#icon-folderwhite4"></use>
-        </svg>
-        <svg class="folder-overlay-2" width="282" height="222">
-          <use href="../img/icons.svg#icon-folderwhite2"></use>
-        </svg>
-        <svg class="folder-icon-1" width="227" height="70">
-          <use href="../img/icons.svg#icon-folder2"></use>
-        </svg>
-        <svg class="folder-icon-2" width="421" height="286">
-          <use href="../img/icons.svg#icon-folder1"></use>
-        </svg>
+      <div class="container mx-auto mt-[140px] max-w-[1312px]">
+  <ul class="flex flex-wrap justify-center gap-6">
+    <li class="flex flex-col justify-between w-[421px] h-[328px]">
+      <div class="relative group">
+        <img
+          class="absolute top-0 right-0 transform translate-y-[20%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/folder-grey.svg"
+          alt="Overlay 1"
+        />
+        <img
+          class="absolute -top-12 left-[290px] transform translate-y-[50%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/info-flower-1.svg"
+          alt="Overlay 3"
+        />
+        <img
+          class="absolute -top-6 left-[190px] transform translate-y-[50%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/info-flower-2.svg"
+          alt="Overlay 4"
+        />
+        <img
+          class="absolute top-5 right-0 transform translate-y-[30%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/folder-white.svg"
+          alt="Overlay 2"
+        />
+        <img class="absolute" src="../img/SVG/bg.svg" alt="Icon 1" />
+        <img
+          class="absolute top-[42px]"
+          src="../img/SVG/base-title.svg"
+          alt="Icon 2"
+        />
       </div>
-      <div class="card-text">
-        <p class="card-label">1/6</p>
-        <p class="card-title">Інтерактивна карта</p>
-      </div>
-    </li>
-    <li class="card-item">
-      <div class="folder">
-        <svg class="folder-overlay-1" width="282" height="222">
-          <use href="../img/icons.svg#icon-folderwhite1"></use>
-        </svg>
-        <svg class="folder-overlay-3" width="87" height="190">
-          <use href="../img/icons.svg#icon-folderwhite3"></use>
-        </svg>
-        <svg class="folder-overlay-4" width="102" height="159">
-          <use href="../img/icons.svg#icon-folderwhite4"></use>
-        </svg>
-        <svg class="folder-overlay-2" width="282" height="222">
-          <use href="../img/icons.svg#icon-folderwhite2"></use>
-        </svg>
-        <svg class="folder-icon-1" width="227" height="70">
-          <use href="../img/icons.svg#icon-folder2"></use>
-        </svg>
-        <svg class="folder-icon-2" width="421" height="286">
-          <use href="../img/icons.svg#icon-folder1"></use>
-        </svg>
-      </div>
-      <div class="card-text">
-        <p class="card-label">2/6</p>
-        <p class="card-title">Стратегічне планування</p>
+      <div class="relative">
+        <p
+          class="absolute -top-[330px] left-0 py-4 px-11 text-white text-xl z-10"
+        >
+          1/6
+        </p>
+        <p
+          class="absolute bottom-[54px] left-0 pl-11 text-white text-[26px] transform translate-y-[50%] transition-transform duration-200 ease-in-out"
+        >
+          Інтерактивна карта
+        </p>
       </div>
     </li>
-    <li class="card-item">
-      <div class="folder">
-        <svg class="folder-overlay-1" width="282" height="222">
-          <use href="../img/icons.svg#icon-folderwhite1"></use>
-        </svg>
-        <svg class="folder-overlay-3" width="87" height="190">
-          <use href="../img/icons.svg#icon-folderwhite3"></use>
-        </svg>
-        <svg class="folder-overlay-4" width="102" height="159">
-          <use href="../img/icons.svg#icon-folderwhite4"></use>
-        </svg>
-        <svg class="folder-overlay-2" width="282" height="222">
-          <use href="../img/icons.svg#icon-folderwhite2"></use>
-        </svg>
-        <svg class="folder-icon-1" width="227" height="70">
-          <use href="../img/icons.svg#icon-folder2"></use>
-        </svg>
-        <svg class="folder-icon-2" width="421" height="286">
-          <use href="../img/icons.svg#icon-folder1"></use>
-        </svg>
+    <li class="flex flex-col justify-between w-[421px] h-[328px]">
+      <div class="relative group">
+        <img
+          class="absolute top-0 right-0 transform translate-y-[20%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/folder-grey.svg"
+          alt="Overlay 1"
+        />
+        <img
+          class="absolute -top-12 left-[290px] transform translate-y-[50%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/info-flower-1.svg"
+          alt="Overlay 3"
+        />
+        <img
+          class="absolute -top-6 left-[190px] transform translate-y-[50%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/info-flower-2.svg"
+          alt="Overlay 4"
+        />
+        <img
+          class="absolute top-5 right-0 transform translate-y-[30%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/folder-white.svg"
+          alt="Overlay 2"
+        />
+        <img class="absolute" src="../img/SVG/bg.svg" alt="Icon 1" />
+        <img
+          class="absolute top-[42px]"
+          src="../img/SVG/base-title.svg"
+          alt="Icon 2"
+        />
       </div>
-      <div class="card-text">
-        <p class="card-label">3/6</p>
-        <p class="card-title">
+      <div class="relative">
+        <p
+          class="absolute -top-[330px] left-0 py-4 px-11 text-white text-xl z-10"
+        >
+          2/6
+        </p>
+        <p
+          class="absolute bottom-[54px] left-0 pl-11 text-white text-[26px] transform translate-y-[50%] transition-transform duration-200 ease-in-out"
+        >
+          Стратегічне планування
+        </p>
+      </div>
+    </li>
+    <li class="flex flex-col justify-between w-[421px] h-[328px]">
+      <div class="relative group">
+        <img
+          class="absolute top-0 right-0 transform translate-y-[20%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/folder-grey.svg"
+          alt="Overlay 1"
+        />
+        <img
+          class="absolute -top-12 left-[290px] transform translate-y-[50%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/info-flower-1.svg"
+          alt="Overlay 3"
+        />
+        <img
+          class="absolute -top-6 left-[190px] transform translate-y-[50%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/info-flower-2.svg"
+          alt="Overlay 4"
+        />
+        <img
+          class="absolute top-5 right-0 transform translate-y-[30%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/folder-white.svg"
+          alt="Overlay 2"
+        />
+        <img class="absolute" src="../img/SVG/bg.svg" alt="Icon 1" />
+        <img
+          class="absolute top-[42px]"
+          src="../img/SVG/base-title.svg"
+          alt="Icon 2"
+        />
+      </div>
+      <div class="relative">
+        <p
+          class="absolute -top-[330px] left-0 py-4 px-11 text-white text-xl z-10"
+        >
+          3/6
+        </p>
+        <p
+          class="absolute bottom-[94px] left-0 pl-11 text-white text-[26px] transform translate-y-[50%] transition-transform duration-200 ease-in-out"
+        >
           Реєстр договорів про співробітництво територіальних громад
         </p>
       </div>
     </li>
-    <li class="card-item">
-      <div class="folder">
-        <svg class="folder-overlay-1" width="282" height="222">
-          <use href="../img/icons.svg#icon-folderwhite1"></use>
-        </svg>
-        <svg class="folder-overlay-3" width="87" height="190">
-          <use href="../img/icons.svg#icon-folderwhite3"></use>
-        </svg>
-        <svg class="folder-overlay-4" width="102" height="159">
-          <use href="../img/icons.svg#icon-folderwhite4"></use>
-        </svg>
-        <svg class="folder-overlay-2" width="282" height="222">
-          <use href="../img/icons.svg#icon-folderwhite2"></use>
-        </svg>
-        <svg class="folder-icon-1" width="227" height="70">
-          <use href="../img/icons.svg#icon-folder2"></use>
-        </svg>
-        <svg class="folder-icon-2" width="421" height="286">
-          <use href="../img/icons.svg#icon-folder1"></use>
-        </svg>
+    <li class="flex flex-col justify-between w-[421px] h-[328px]">
+      <div class="relative group">
+        <img
+          class="absolute top-0 right-0 transform translate-y-[20%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/folder-grey.svg"
+          alt="Overlay 1"
+        />
+        <img
+          class="absolute -top-12 left-[290px] transform translate-y-[50%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/info-flower-1.svg"
+          alt="Overlay 3"
+        />
+        <img
+          class="absolute -top-6 left-[190px] transform translate-y-[50%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/info-flower-2.svg"
+          alt="Overlay 4"
+        />
+        <img
+          class="absolute top-5 right-0 transform translate-y-[30%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/folder-white.svg"
+          alt="Overlay 2"
+        />
+        <img class="absolute" src="../img/SVG/bg.svg" alt="Icon 1" />
+        <img
+          class="absolute top-[42px]"
+          src="../img/SVG/base-title.svg"
+          alt="Icon 2"
+        />
       </div>
-      <div class="card-text">
-        <p class="card-label">4/6</p>
-        <p class="card-title">Профайл громад</p>
-      </div>
-    </li>
-    <li class="card-item">
-      <div class="folder">
-        <svg class="folder-overlay-1" width="282" height="222">
-          <use href="../img/icons.svg#icon-folderwhite1"></use>
-        </svg>
-        <svg class="folder-overlay-3" width="87" height="190">
-          <use href="../img/icons.svg#icon-folderwhite3"></use>
-        </svg>
-        <svg class="folder-overlay-4" width="102" height="159">
-          <use href="../img/icons.svg#icon-folderwhite4"></use>
-        </svg>
-        <svg class="folder-overlay-2" width="282" height="222">
-          <use href="../img/icons.svg#icon-folderwhite2"></use>
-        </svg>
-        <svg class="folder-icon-1" width="227" height="70">
-          <use href="../img/icons.svg#icon-folder2"></use>
-        </svg>
-        <svg class="folder-icon-2" width="421" height="286">
-          <use href="../img/icons.svg#icon-folder1"></use>
-        </svg>
-      </div>
-      <div class="card-text">
-        <p class="card-label">5/6</p>
-        <p class="card-title">Інвестиційний індекс</p>
+      <div class="relative">
+        <p
+          class="absolute -top-[330px] left-0 py-4 px-11 text-white text-xl z-10"
+        >
+          4/6
+        </p>
+        <p
+          class="absolute bottom-[54px] left-0 pl-11 text-white text-[26px] transform translate-y-[50%] transition-transform duration-200 ease-in-out"
+        >
+          Профайл громад
+        </p>
       </div>
     </li>
-    <li class="card-item">
-      <div class="folder">
-        <svg class="folder-overlay-1" width="282" height="222">
-          <use href="../img/icons.svg#icon-folderwhite1"></use>
-        </svg>
-        <svg class="folder-overlay-3" width="87" height="190">
-          <use href="../img/icons.svg#icon-folderwhite3"></use>
-        </svg>
-        <svg class="folder-overlay-4" width="102" height="159">
-          <use href="../img/icons.svg#icon-folderwhite4"></use>
-        </svg>
-        <svg class="folder-overlay-2" width="282" height="222">
-          <use href="../img/icons.svg#icon-folderwhite2"></use>
-        </svg>
-        <svg class="folder-icon-1" width="227" height="70">
-          <use href="../img/icons.svg#icon-folder2"></use>
-        </svg>
-        <svg class="folder-icon-2" width="421" height="286">
-          <use href="../img/icons.svg#icon-folder1"></use>
-        </svg>
+    <li class="flex flex-col justify-between w-[421px] h-[328px]">
+      <div class="relative group">
+        <img
+          class="absolute top-0 right-0 transform translate-y-[20%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/folder-grey.svg"
+          alt="Overlay 1"
+        />
+        <img
+          class="absolute -top-12 left-[290px] transform translate-y-[50%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/info-flower-1.svg"
+          alt="Overlay 3"
+        />
+        <img
+          class="absolute -top-6 left-[190px] transform translate-y-[50%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/info-flower-2.svg"
+          alt="Overlay 4"
+        />
+        <img
+          class="absolute top-5 right-0 transform translate-y-[30%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/folder-white.svg"
+          alt="Overlay 2"
+        />
+        <img class="absolute" src="../img/SVG/bg.svg" alt="Icon 1" />
+        <img
+          class="absolute top-[42px]"
+          src="../img/SVG/base-title.svg"
+          alt="Icon 2"
+        />
       </div>
-      <div class="card-text">
-        <p class="card-label">6/6</p>
-        <p class="card-title">Місцеві дані</p>
+      <div class="relative">
+        <p
+          class="absolute -top-[330px] left-0 py-4 px-11 text-white text-xl z-10"
+        >
+          5/6
+        </p>
+        <p
+          class="absolute bottom-[54px] left-0 pl-11 text-white text-[26px] transform translate-y-[50%] transition-transform duration-200 ease-in-out"
+        >
+          Інвестиційний індекс
+        </p>
+      </div>
+    </li>
+    <li class="flex flex-col justify-between w-[421px] h-[328px]">
+      <div class="relative group">
+        <img
+          class="absolute top-0 right-0 transform translate-y-[20%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/folder-grey.svg"
+          alt="Overlay 1"
+        />
+        <img
+          class="absolute -top-12 left-[290px] transform translate-y-[50%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/info-flower-1.svg"
+          alt="Overlay 3"
+        />
+        <img
+          class="absolute -top-6 left-[190px] transform translate-y-[50%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/info-flower-2.svg"
+          alt="Overlay 4"
+        />
+        <img
+          class="absolute top-5 right-0 transform translate-y-[30%] transition-transform duration-500 ease-in-out group-hover:translate-y-[0%]"
+          src="../img/SVG/folder-white.svg"
+          alt="Overlay 2"
+        />
+        <img class="absolute" src="../img/SVG/bg.svg" alt="Icon 1" />
+        <img
+          class="absolute top-[42px]"
+          src="../img/SVG/base-title.svg"
+          alt="Icon 2"
+        />
+      </div>
+      <div class="relative">
+        <p
+          class="absolute -top-[330px] left-0 py-4 px-11 text-white text-xl z-10"
+        >
+          6/6
+        </p>
+        <p
+          class="absolute bottom-[54px] left-0 pl-11 text-white text-[26px] transform translate-y-[50%] transition-transform duration-200 ease-in-out"
+        >
+          Місцеві дані
+        </p>
       </div>
     </li>
   </ul>
 </div>
 
-      <div class="infographic">
-  <div class="infographic-header">
-    <p class="infographic-text">
-      Cтан затвердження статегічних </br > документів у розрізі громад
+      <div
+  class="flex container mx-auto flex-col items-center justify-start gap-16 mx-auto my-[140px] px-11 max-w-[1312px]"
+>
+  <div class="self-start">
+    <p class="font-normal text-[44px] text-white">
+      Cтан затвердження статегічних <br />
+      документів у розрізі громад
     </p>
   </div>
-  <div class="infographic-cards">
-    <ul class="infographic-card-list">
-      <li class="infographic-card-item">
-        <div class="card-circle">
-          <svg
-            class="infographic-circle infographic-circle-back"
-            width="208"
-            height="208"
-          >
-            <use href="../img/icons.svg#icon-Ellipse-5-09"></use>
-          </svg>
-          <svg class="infographic-circle" width="208" height="208">
-            <use href="../img/icons.svg#icon-Ellipse-4-91"></use>
-          </svg>
-          <p class="percentage">91%</p>
+  <div>
+    <ul class="flex flex-wrap items-start justify-center gap-9">
+      <li
+        class="flex flex-col items-center justify-end gap-24 relative w-[278px] h-[276px]"
+      >
+        <div class="relative">
+          <img
+            class="relative translate-y-40"
+            src="../img/SVG/info-ellipse-back.svg"
+            alt="Circle Background"
+          />
+          <img
+            class="absolute translate-y-[-47px]"
+            src="../img/svg/info-ellipse-91.svg"
+            alt="Circle"
+          />
+          <p class="font-normal text-[44px] pt-[10px] text-center text-white">
+            91%
+          </p>
         </div>
-        <p class="card-info">
+        <p
+          class="font-normal text-[18px] leading-[1.33] text-[#d3d3d3] self-start"
+        >
           ТГ, які охоплені процесом стратегічного планування
         </p>
       </li>
-      <li class="infographic-card-item">
-        <div class="card-circle">
-          <svg
-            class="infographic-circle infographic-circle-back"
-            width="208"
-            height="208"
-          >
-            <use href="../img/icons.svg#icon-Ellipse-5-09"></use>
-          </svg>
-          <svg class="infographic-circle" width="139" height="207">
-            <use href="../img/icons.svg#icon-Ellipse-4-56"></use>
-          </svg>
-          <p class="percentage">56%</p>
+      <li
+        class="flex flex-col items-center justify-end gap-24 relative w-[278px] h-[276px]"
+      >
+        <div class="relative">
+          <img
+            class="relative translate-y-40"
+            src="../img/SVG/info-ellipse-back.svg"
+            alt="Circle Background"
+          />
+          <img
+            class="absolute translate-y-[-47px] translate-x-[69px]"
+            src="../img/svg/info-ellipse-56.svg"
+            alt="Circle"
+          />
+          <p class="font-normal text-[44px] pt-[10px] text-center text-white">
+            56%
+          </p>
         </div>
-        <p class="card-info">ТГ, які мають затверджені стратегії</p>
+        <p
+          class="font-normal text-[18px] leading-[1.33] text-[#d3d3d3] self-start"
+        >
+          ТГ, які мають затверджені стратегії
+        </p>
       </li>
-      <li class="infographic-card-item">
-        <div class="card-circle">
-          <svg
-            class="infographic-circle infographic-circle-back"
-            width="208"
-            height="208"
-          >
-            <use href="../img/icons.svg#icon-Ellipse-5-09"></use>
-          </svg>
-          <svg class="infographic-circle" width="105" height="158">
-            <use href="../img/icons.svg#icon-Ellipse-4-35"></use>
-          </svg>
-          <p class="percentage">35%</p>
+      <li
+        class="flex flex-col items-center justify-end gap-24 relative w-[278px] h-[276px]"
+      >
+        <div class="relative">
+          <img
+            class="relative translate-y-40"
+            src="../img/SVG/info-ellipse-back.svg"
+            alt="Circle Background"
+          />
+          <img
+            class="absolute translate-y-[-47px] translate-x-[103px]"
+            src="../img/svg/info-ellipse-35.svg"
+            alt="Circle"
+          />
+          <p class="font-normal text-[44px] pt-[10px] text-center text-white">
+            35%
+          </p>
         </div>
-        <p class="card-info">ТГ, які розробляють </br> стратегії</p>
+        <p
+          class="font-normal text-[18px] leading-[1.33] text-[#d3d3d3] self-start"
+        >
+          ТГ, які розробляють <br />
+          стратегії
+        </p>
       </li>
-      <li class="infographic-card-item">
-        <div class="card-circle">
-          <svg
-            class="infographic-circle infographic-circle-back"
-            width="208"
-            height="208"
-          >
-            <use href="../img/icons.svg#icon-Ellipse-5-09"></use>
-          </svg>
-          <svg class="infographic-circle infographic-circle-9" width="51" height="36">
-            <use href="../img/icons.svg#icon-Ellipse-4-09"></use>
-          </svg>
-          <p class="percentage">9%</p>
+      <li
+        class="flex flex-col items-center justify-end gap-24 relative w-[278px] h-[276px]"
+      >
+        <div class="relative">
+          <img
+            class="relative translate-y-40"
+            src="../img/SVG/info-ellipse-back.svg"
+            alt="Circle Background"
+          />
+          <img
+            class="absolute translate-y-[-47px] translate-x-[103px]"
+            src="../img/svg/info-ellipse-09.svg"
+            alt="Circle"
+          />
+          <p class="font-normal text-[44px] pt-[10px] text-center text-white">
+            9%
+          </p>
         </div>
-        <p class="card-info">ТГ, які не починали роботу </br> над стратегіями</p>
+        <p
+          class="font-normal text-[18px] leading-[1.33] text-[#d3d3d3] self-start"
+        >
+          ТГ, які не починали роботу <br />
+          над стратегіями
+        </p>
       </li>
     </ul>
   </div>
 </div>
 
-      <section class="ukraine-map">
-<div class="map">
-  <div class="map-info">
-    <ul class="map-info-list">
-      <li class="map-info-item">
-        <svg class="map-logo" width="44" height="44">
-          <use href="../img/icons.svg#icon-Ellipseyellow"></use>
-        </svg>
-        <p class="map-info-text">більше 70% територіальних </br> громад</p>
-      </li>
-      <li class="map-info-item">
-        <svg class="map-logo" width="44" height="44">
-          <use href="../img/icons.svg#icon-Ellipseblue"></use>
-        </svg>
-        <p class="map-info-text">від 40% до 70% </br> територіальних громад</p>
-      </li>
-      <li class="map-info-item">
-        <svg class="map-logo-grey" width="44" height="44">
-          <use href="../img/icons.svg#icon-Ellipseblack"></use>
-        </svg>
-        <p class="map-info-text">менше 40% </br> територіальних громад</p>
-      </li>
-    </ul>
-  </div>
-  <div class="region-map">
-    <!-- <svg class="map-logo" width="1235" height="784">
-        <use href="../img/icons.svg#icon-Ukraine-Map"></use>
-    </svg> -->
-    <svg class="map-logo-Cherkasy" width="228" height="180">
-        <use href="../img/icons.svg#icon-Cherkasy"></use>
-    </svg>
-        <svg class="map-logo-Chernihiv" width="208" height="214">
-        <use href="../img/icons.svg#icon-Chernihiv"></use>
-    </svg>
-        <svg class="map-logo-Chernivtsi" width="181" height="96">
-        <use href="../img/icons.svg#icon-Chernivtsi"></use>
-    </svg>
-        <svg class="map-logo-Dnipropetrovsk" width="273" height="171">
-        <use href="../img/icons.svg#icon-Dnipropetrovsk"></use>
-    </svg>
-        <svg class="map-logo-Donetsk" width="176" height="232">
-        <use href="../img/icons.svg#icon-Donetsk"></use>
-    </svg>
-        <svg class="map-logo-Ivano-Frankivsk" width="147" height="183">
-        <use href="../img/icons.svg#icon-Ivano-Frankivsk"></use>
-    </svg>
-        <svg class="map-logo-Kharkiv" width="223" height="195">
-        <use href="../img/icons.svg#icon-Kharkiv"></use>
-    </svg>
-        <svg class="map-logo-Kherson" width="247" height="175">
-        <use href="../img/icons.svg#icon-Kherson"></use>
-    </svg>
-        <svg class="map-logo-Khmelnytskyi" width="123" height="217">
-        <use href="../img/icons.svg#icon-Khmelnytskyi"></use>
-    </svg>
-        <svg class="map-logo-Kirovohrad" width="286" height="149">
-        <use href="../img/icons.svg#icon-Kirovohrad"></use>
-    </svg>
-        <svg class="map-logo-Kyiv-city" width="43" height="42">
-        <use href="../img/icons.svg#icon-Kyiv-city"></use>
-    </svg>
-    <div class="kyiv-hover">
-        <svg class="map-logo-Kyiv" width="201" height="243">
-        <use href="../img/icons.svg#icon-Kyiv"></use>
-    </svg>
-        <div class="details">
-        <div class="elipse-detail">
-            <svg class="elipse-detail-icon" width="60" height="60">
-        <use href="../img/icons.svg#icon-Ellipse-5-76"></use>
-    </svg>
-                <svg class="elipse-detail-icon" width="60" height="60">
-        <use href="../img/icons.svg#icon-Ellipse-4-76"></use>
-    </svg>
-    <p class="elipse-detail-percentage">76%</p>
-        </div>
-        <svg class="line-detail" width="2" height="62">
-        <use href="../img/icons.svg#icon-line76"></use>
-    </svg>
-        <p class="text-detail">Київська Область</p>
+      <section class="bg-gray-900 rounded-3xl p-11 max-w-screen-xl mx-auto">
+  <div class="flex flex-col items-center justify-center gap-16">
+    <div class="flex items-center justify-center gap-24">
+      <div class="flex items-center gap-3">
+        <img
+          src="../img/SVG/Ellipseyellow.svg"
+          alt="Ukraine Map"
+          class="w-6 h-6"
+        />
+        <p class="text-sm font-light text-gray-300 pb-2">
+          більше 70% територіальних<br />громад
+        </p>
+      </div>
+      <div class="flex items-center gap-3">
+        <img
+          src="../img/SVG/Ellipseblue.svg"
+          alt="Ukraine Map"
+          class="w-6 h-6"
+        />
+        <p class="text-sm font-light text-gray-300 pb-2">
+          від 40% до 70%<br />територіальних громад
+        </p>
+      </div>
+      <div class="flex items-center gap-3">
+        <img
+          src="../img/SVG/Ellipseblack.svg"
+          alt="Ukraine Map"
+          class="w-6 h-6"
+        />
+        <p class="text-sm font-light text-gray-300 pb-2">
+          менше 40%<br />територіальних громад
+        </p>
+      </div>
     </div>
+    <div class="relative">
+      <img
+        src="../img/SVG/ukraine-map.svg"
+        alt="Ukraine Map"
+        class="w-full h-full object-cover"
+      />
     </div>
-        <svg class="map-logo-Luhansk" width="165" height="226">
-        <use href="../img/icons.svg#icon-Luhansk"></use>
-    </svg>
-        <svg class="map-logo-Lviv" width="191" height="198">
-        <use href="../img/icons.svg#icon-Lviv"></use>
-    </svg>
-        <svg class="map-logo-Mykolaiv" width="204" height="175">
-        <use href="../img/icons.svg#icon-Mykolaiv"></use>
-    </svg>
-        <svg class="map-logo-Odesa" width="213" height="289">
-        <use href="../img/icons.svg#icon-Odesa"></use>
-    </svg>
-        <svg class="map-logo-Poltava" width="235" height="185">
-        <use href="../img/icons.svg#icon-Poltava"></use>
-    </svg>
-        <svg class="map-logo-Rivne" width="183" height="202">
-        <use href="../img/icons.svg#icon-Rivne"></use>
-    </svg>
-        <svg class="map-logo-Sevastopol" width="40" height="41">
-        <use href="../img/icons.svg#icon-Sevastopol"></use>
-    </svg>
-        <svg class="map-logo-Simferopol" width="287" height="173">
-        <use href="../img/icons.svg#icon-Simferopol"></use>
-    </svg>
-        <svg class="map-logo-Sumy" width="190" height="237">
-        <use href="../img/icons.svg#icon-Sumy"></use>
-    </svg>
-        <svg class="map-logo-Ternopil" width="121" height="179">
-        <use href="../img/icons.svg#icon-Ternopil"></use>
-    </svg>
-        <svg class="map-logo-Vinnytsia" width="183" height="183">
-        <use href="../img/icons.svg#icon-Vinnytsia"></use>
-    </svg>
-        <svg class="map-logo-Volyn" width="173" height="177">
-        <use href="../img/icons.svg#icon-Volyn"></use>
-    </svg>
-        <svg class="map-logo-Zakarpattia" width="172" height="120">
-        <use href="../img/icons.svg#icon-Zakarpattia"></use>
-    </svg>
-        <svg class="map-logo-Zaporizhzhia" width="211" height="199">
-        <use href="../img/icons.svg#icon-Zaporizhzhia"></use>
-    </svg>
-        <svg class="map-logo-Zhytomyr" width="176" height="218">
-        <use href="../img/icons.svg#icon-Zhytomyr"></use>
-    </svg>
   </div>
-</div>
 </section>
-
 
     </main>
 
-    <footer class="footer">
-  <div class="creeping-line">
-    <span class="line-text"
-      >Портал працює в тестовому режимі &emsp;&emsp;&emsp;&emsp; Портал працює в
+    <footer class="mt-[140px] text-white">
+  <div class="overflow-hidden whitespace-nowrap bg-blue-600 py-2">
+    <span class="inline-block animate-marquee text-sm font-light tracking-wide pb-2">
+      Портал працює в тестовому режимі &emsp;&emsp;&emsp;&emsp; Портал працює в
       тестовому режимі &emsp;&emsp;&emsp;&emsp; Портал працює в тестовому режимі
       &emsp;&emsp;&emsp;&emsp; Портал працює в тестовому режимі
       &emsp;&emsp;&emsp;&emsp; Портал працює в тестовому режимі
-      &emsp;&emsp;&emsp;&emsp; Портал працює в тестовому режимі
-      &emsp;&emsp;&emsp;&emsp; Портал працює в тестовому режимі
-      &emsp;&emsp;&emsp;&emsp; Портал працює в тестовому режимі
-      &emsp;&emsp;&emsp;&emsp; Портал працює в тестовому режимі
-      &emsp;&emsp;&emsp;&emsp; Портал працює в тестовому режимі
-      &emsp;&emsp;&emsp;&emsp; Портал працює в тестовому режимі</span
-    >
+    </span>
   </div>
-  <div class="footer-container">
-    <div class="top-frame">
-      <div class="rectangle"></div>
-      <div class="text-wrapper">
+  <div class="mx-auto max-w-7xl px-6 py-11 flex flex-col gap-11 relative">
+    <div class="flex items-center gap-2">
+      <img class="w-9 h-8 text-white" src="../img/SVG/logo.svg" alt="logo" />
+      <div class="text-m font-medium pb-2">
         Геоінформаційна система <br />
         регіонального розвитку
       </div>
     </div>
-    <div class="main-frame">
-      <div class="address">
-        <div class="text-wrapper-2">Адреса:</div>
-        <p class="address-item">01135, Київ, Берестейський проспект , 14</p>
+    <div class="flex flex-col gap-8">
+      <div class="flex flex-col gap-4">
+        <h4 class="text-lg font-medium">Адреса:</h4>
+        <p class="text-sm font-light">
+          01135, Київ, Берестейський проспект, 14
+        </p>
       </div>
-      <div class="developed">
-        <div class="text-wrapper-2">Розробка та підтримка:</div>
-        <svg class="footer-logo" width="128" height="17">
-          <use href="../img/icons.svg#icon-softprologo"></use>
-        </svg>
+      <div class="flex flex-col gap-4">
+        <h4 class="text-lg font-medium">Розробка та підтримка:</h4>
+        <img src="../img/SVG/softprologo.svg" alt="SoftPro Logo" class="w-32" />
       </div>
-      <div class="partners">
-        <div class="text-wrapper-2">Партнери:</div>
-        <ul class="div-5">
-          <img class="miu" src="../img/miu 1.png" />
-          <img class="img" src="../img/logo1 1.png" />
-          <img
-            class="the-world-bank-logo"
-            src="../img//The_World_Bank_logo 1.png"
-          />
-          <img class="eu-logo" src="../img/eu_logo 1.png" />
+      <div class="flex flex-col gap-4">
+        <h4 class="text-lg font-medium">Партнери:</h4>
+        <ul class="flex items-center gap-4">
+          <li><img src="../img/miu 1.png" alt="MIU Logo" /></li>
+          <li>
+            <img src="../img/logo1 1.png" alt="Partner Logo 1" />
+          </li>
+          <li>
+            <img src="../img/The_World_Bank_logo 1.png" alt="World Bank Logo" />
+          </li>
+          <li><img src="../img/eu_logo 1.png" alt="EU Logo" /></li>
         </ul>
       </div>
-      <div class="footer-animation">
-        <div class="river-group">
-          <svg class="animation-river-1" width="520" height="37">
-            <use href="../img/icons.svg#icon-river1"></use>
-          </svg>
-          <svg class="animation-river-2" width="724" height="38">
-            <use href="../img/icons.svg#icon-river2"></use>
-          </svg>
+      <div class="absolute top-50 right-0">
+        <div class="relative top-24 right-[-60px]">
+          <img class="w-[520px] h-9 ml-[190px]" src="../img/SVG/river1.svg">
+          </img>
+          <img class="w-[724px] h-9 mt-4" src="../img/SVG/river2.svg">
+          </img>
         </div>
-        <div class="flower-group">
-          <svg class="animation-flower-1" width="85" height="159">
-            <use href="../img/icons.svg#icon-flwfoot1"></use>
-          </svg>
-          <svg class="animation-flower-2" width="20" height="23">
-            <use href="../img/icons.svg#icon-flwfoot2"></use>
-          </svg>
-          <svg class="animation-flower-3" width="19" height="26">
-            <use href="../img/icons.svg#icon-flwfoot3"></use>
-          </svg>
+        <div class="absolute right-[200px] top-8">
+          <img class="w-20 h-40" src="../img/svg/flwfoot1.svg">
+          </img>
+          <img
+            class="absolute w-5 h-6 top-16 left-12"
+            src="../img/svg/flwfoot2.svg">
+          </img>
+          <img
+            class="absolute w-5 h-6 top-16 left-4"
+            src="../img/svg/flwfoot3.svg">
+          </img>
         </div>
       </div>
     </div>
-    <div class="bottom-frame">
-      <p class="rights">
+    <div class="flex justify-around gap-6 text-xs font-light text-gray-400">
+      <p class="max-w-[392px]">
         Усі права на матеріали, розміщені на цьому сайті, належать Міністерству
         розвитку громад, територій та інфраструктури. При частковому або повному
-        використанні матеріалів сайту обов&#39;язковим є посилання із
-        зазначенням джерела
+        використанні матеріалів сайту обов’язковим є посилання із зазначенням
+        джерела.
       </p>
-      <p class="ministry">
+      <p class="max-w-[392px]">
         © 2024 Міністерство розвитку громад, територій та інфраструктури
         України.
       </p>
-      <p class="license">
+      <p class="max-w-[392px]">
         Весь контент доступний за ліцензією Creative Commons Attribution 4.0
-        International license, якщо не зазначено інше
+        International license, якщо не зазначено інше.
       </p>
     </div>
   </div>
 </footer>
+
+<style>
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .animate-marquee {
+    animation: marquee 60s linear infinite;
+  }
+</style>
 
 
   </body>
